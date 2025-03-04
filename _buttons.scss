@@ -1,0 +1,17 @@
+.btn-main {
+  border-radius: 2px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 8px 16px;
+  background: $primary-green;
+  transition: background 200ms linear;
+  color: $white;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background: lighten($color: $primary-green, $amount: 5%);
+  }
+}

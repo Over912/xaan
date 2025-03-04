@@ -1,0 +1,77 @@
+.confirm-modal {
+  width: 375px !important;
+  .ant-modal {
+    &-content {
+      border-radius: 30px;
+    }
+
+    &-body {
+      padding: 32px;
+    }
+  }
+
+  &-content {
+    .icon-wrapper {
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 24px auto;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(#fbaf42, 0.1);
+      i {
+        font-size: 32px;
+        color: #fbaf42;
+      }
+    }
+
+    .title {
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        flex: 1;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 15px;
+        text-transform: uppercase;
+        transition: background 300ms ease-in-out;
+        &:first-child {
+          background-color: $white;
+          border: 1px solid $primary-green;
+          color: #606060;
+          margin-right: 24px;
+          &:hover {
+            background-color: lighten($color: $primary-green, $amount: 5%);
+            color: $white;
+            border-color: $primary-green;
+          }
+        }
+
+        &:last-child {
+          background-color: $primary-green;
+          color: $white;
+          border: 1px solid transparent;
+          &:hover {
+            background-color: lighten($color: $primary-green, $amount: 5%);
+            color: $white;
+            border-color: $primary-green;
+          }
+        }
+      }
+    }
+  }
+}
