@@ -234,6 +234,43 @@ document.getElementById("toggleView").addEventListener("click", function() {
     document.body.removeChild(a);
 });
 </script>
+										      <button id="toggleButton" class="expandable-btn">Click Me</button>
+<div id="infoBox" class="hidden">
+    <p>This is the hidden information.</p>
+</div>
+<style>
+	.expandable-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.expandable-btn.active {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+#infoBox {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+</style>
+<script>
+	document.getElementById("toggleButton").addEventListener("click", function() {
+    let infoBox = document.getElementById("infoBox");
+    this.classList.toggle("active"); // Shrinks the button
+    infoBox.classList.toggle("hidden"); // Shows the info box
+});
+
+</script>
+
 									      </div>
 								      </div>
 											      <div class="documents-table">
