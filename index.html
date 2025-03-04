@@ -234,6 +234,15 @@ document.getElementById("toggleView").addEventListener("click", function() {
     let listView = document.getElementById("listView");
     listView.classList.toggle("hidden");
 });
+	document.querySelector(".download").addEventListener("click", function() {
+    let fileUrl = "DAR.pdf";  // Change this if the file path is dynamic
+    let a = document.createElement("a");
+    a.href = fileUrl;
+    a.download = "DAR.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
 </script>
 									      </div>
 								      </div>
