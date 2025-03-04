@@ -20,13 +20,7 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
   })(window,document,"script","https://cdn.perfdrive.com/aperture/aperture.js","bvh9","ssConf");
     ssConf("c1" , "https://cas.avalon.perfdrive.com");
 </script>
-	<script>
-		document.querySelectorAll(".row").forEach(row => {
-    row.addEventListener("click", function() {
-        this.classList.toggle("collapsed");
-    });
-});
-	</script><!--<base href="/">--><base href="/">
+	<!--<base href="/">--><base href="/">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="download%20(1).png">
@@ -227,21 +221,11 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
 
 
 <script>
-document.getElementById("toggleView").addEventListener("click", function() {
-    let listView = document.getElementById("listView");
-    listView.classList.toggle("hidden");
+document.querySelectorAll(".row").forEach(row => {
+    row.addEventListener("click", function() {
+        this.classList.toggle("collapsed");
+    });
 });
-	document.querySelector(".download").addEventListener("click", function() {
-    let fileUrl = "https://github.com/Over912/xaan/blob/main/DAR.pdf";  // Change this if the file path is dynamic
-    let a = document.createElement("a");
-    a.href = fileUrl;
-    a.download = "DAR.pdf";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-});
-	
-
 </script>
 										      
 									      </div>
