@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcorp_mfe_host=self.webpackChunkcorp_mfe_host||[]).push([[728],{9728:(e,n,o)=>{o.r(n),o.d(n,{Route:()=>u});o(8160);var s=o(5006),t=o(7360),c=o.n(t),r=o(2455);const u=(0,s.uV)("/verify")({component:function(){return(0,r.jsx)(c(),{})}})}}]);
