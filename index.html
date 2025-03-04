@@ -157,7 +157,43 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
 		width: initial;
 	}
 }
-</style></head>
+</style>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .documents-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-head, .row {
+            display: flex;
+            background: #f4f4f4;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .column {
+            flex: 1;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .row-content {
+            display: none;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .row.expanded + .row-content {
+            display: block;
+        }
+    </style>
+</head>
       <body>
 	      <div id="root">
 	<div class="app-container">
@@ -273,6 +309,15 @@ document.querySelectorAll(".row").forEach(row => {
 													    </div>
 													</div>									      
 									      			</div>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".row").forEach(row => {
+                row.addEventListener("click", function () {
+                    this.classList.toggle("expanded");
+                });
+            });
+        });
+    </script>
 	
 												      <a class="mobile-faq" href="https://portal.khanbank.com/verify/faq">
 													      <span>Түгээмэл асуулт хариулт</span>
