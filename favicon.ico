@@ -1,0 +1,11 @@
+<!DOCTYPE html<html>
+      <head>
+        <base href="/">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" href="/logo192.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <script src="https://www.google.com/recaptcha/api.js?hl=mn&render=6LccLboqAAAAAHoAzQZ_GdUrrqr_wCzp0--23nkP"></script>
+        <title>Корпорэйт | ХААН Банк</title>
+      </head>
+      <body><div id="root"></div><script async data-chunk="main" src="main.js"></script></body></html>
