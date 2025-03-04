@@ -234,43 +234,7 @@ document.getElementById("toggleView").addEventListener("click", function() {
     document.body.removeChild(a);
 });
 </script>
-										      <button id="toggleButton" class="expandable-btn">Click Me</button>
-<div id="infoBox" class="hidden">
-    <p>This is the hidden information.</p>
-</div>
-<style>
-	.expandable-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.expandable-btn.active {
-    padding: 5px 10px;
-    font-size: 12px;
-}
-
-.hidden {
-    display: none;
-}
-
-#infoBox {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-}
-
-</style>
-<script>
-	document.getElementById("toggleButton").addEventListener("click", function() {
-    let infoBox = document.getElementById("infoBox");
-    this.classList.toggle("active"); // Shrinks the button
-    infoBox.classList.toggle("hidden"); // Shows the info box
-});
-
-</script>
-
+										      
 									      </div>
 								      </div>
 											      <div class="documents-table">
@@ -316,6 +280,25 @@ document.getElementById("toggleView").addEventListener("click", function() {
 													    </div>
 													</div>									      
 									      			</div>
+	<script>
+    function toggleDetails(button) {
+        // Find the parent row
+        const row = button.closest('.row');
+        // Find the details div
+        const details = row.nextElementSibling;
+
+        // Toggle visibility
+        if (details.style.display === "none" || details.style.display === "") {
+            details.style.display = "block";
+            button.querySelector('i').classList.remove('icon-angleDown');
+            button.querySelector('i').classList.add('icon-angleUp'); // Change icon if needed
+        } else {
+            details.style.display = "none";
+            button.querySelector('i').classList.remove('icon-angleUp');
+            button.querySelector('i').classList.add('icon-angleDown'); // Change icon back
+        }
+    }
+</script>
 												      <a class="mobile-faq" href="https://portal.khanbank.com/verify/faq">
 													      <span>Түгээмэл асуулт хариулт</span>
 													      <i class="icon-angleRight"></i>
