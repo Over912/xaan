@@ -251,38 +251,39 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
 													      <div class="column downloadicon-col-head"> </div>
 												      </div>
 													<div class="table-body">
-													    <div class="row selected">
-													        <div class="index-col-body"></div>
-													        <div class="column file-col-body">
-													            <span class="mobile-title">Файл</span>
-															<div class="file">
-																<a download="Dar.pdf" href="DAR.pdf" class="file-link">
-																	<img src="icon-pdfOutlined.png" class="pdf-icon" alt="logo" style="width:15px; height:20px">
-													                	<span>KLJ22XYVNOAIENK3</span>
-																	</a>
-															</div>
-													        </div>
-													        <div class="column productname-col-body">
-													            <span class="mobile-title">Бүтээгдэхүүний нэр</span>
-													            <span class="mobile-product">ХАРИЛЦАХ/ ИРГЭД / MNT</span>
-													        </div>
-													        <div class="column accountlist-col-body mobile-toggle">
-													            <span class="mob-row-title">5028 850 676</span>
-													            <button class="collapseToggle">
-													                <i class=""></i>
-													            </button>
-													        </div>
-													        <div class="column producttype-col-body">
-													            <span class="mobile-title">Үйлчилгээний төрөл</span>
-													            <span>Дансны хуулга</span>
-													        </div>
-													        <div class="column download-container downloadicon-col-body iconcolumn">
-    <a class="download" href="DAR.pdf" download="DAR.pdf">
-        <img src="icon-download.png" style="width: 20px; height: 20px; border-radius: 10px;" alt="logo">
-        <span>Татах</span>
-    </a>
+													   
+														<div class="row selected">
+    <div class="index-col-body"></div>
+    <div class="column file-col-body">
+        <span class="mobile-title">Файл</span>
+        <div class="file">
+            <a download="Dar.pdf" href="DAR.pdf" class="file-link">
+                <img src="icon-pdfOutlined.png" class="pdf-icon" alt="logo" style="width:15px; height:20px">
+                <span>KLJ22XYVNOAIENK3</span>
+            </a>
+        </div>
+    </div>
+    <div class="column productname-col-body">
+        <span class="mobile-title">Бүтээгдэхүүний нэр</span>
+        <span class="mobile-product">ХАРИЛЦАХ/ ИРГЭД / MNT</span>
+    </div>
+    <div class="column accountlist-col-body mobile-toggle">
+        <span class="mob-row-title">5028 850 676</span>
+        <button class="collapseToggle">
+            <i class=""></i>
+        </button>
+    </div>
+    <div class="column producttype-col-body">
+        <span class="mobile-title">Үйлчилгээний төрөл</span>
+        <span>Дансны хуулга</span>
+    </div>
+    <div class="column download-container downloadicon-col-body iconcolumn">
+        <a class="download" href="DAR.pdf" download="DAR.pdf">
+            <img src="icon-download.png" style="width: 20px; height: 20px; border-radius: 10px;" alt="logo">
+        </a>
+    </div>
 </div>
-													    </div>
+
 													</div>									      
 									      			</div>
 
@@ -378,7 +379,31 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
 																									</div>
 																								</div>
 																							</div>	
-	   
+	   <script>
+function toggleCollapse(event) {
+    const target = event.target.closest('.column.accountlist-col-body'); // Find the closest parent column for accountlist-col-body
+    const row = target.closest('.row'); // Find the closest row element
+
+    // Toggle the 'collapsed' class to hide or show the details
+    row.classList.toggle('collapsed');
+
+    // Optionally, toggle the icon (if you want to change the button icon when collapsed)
+    const icon = target.querySelector('i');
+    if (row.classList.contains('collapsed')) {
+        icon.classList.add('collapsed-icon'); // Add a collapsed icon class (if you have it)
+        icon.classList.remove('expanded-icon'); // Remove expanded icon class (if you have it)
+    } else {
+        icon.classList.add('expanded-icon'); // Add expanded icon class (if you have it)
+        icon.classList.remove('collapsed-icon'); // Remove collapsed icon class (if you have it)
+    }
+}
+
+// Add event listener to all collapse buttons
+document.querySelectorAll('.collapseToggle').forEach(button => {
+    button.addEventListener('click', toggleCollapse);
+});
+</script>
+
 																					      </body>
 																					      </html>
 
