@@ -173,7 +173,7 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
     margin-right: 5px; /* Space between icon and text */
 }
 
-	      #dialog {
+	    #dialog {
     position: fixed;
     top: 0;
     left: 0;
@@ -183,12 +183,16 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999; /* Ensures the dialog is on top of other elements */
 }
 
 #dialog > div {
     background: white;
     padding: 20px;
     border-radius: 5px;
+    max-width: 500px;  /* Optional: limits the width of the dialog */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .close-btn {
@@ -197,6 +201,7 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+    color: #333;
 }
 
 </style>
