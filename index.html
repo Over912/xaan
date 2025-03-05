@@ -390,28 +390,30 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
 	      																		<script>
 																				const modal = document.getElementById("myDialog");
 
-// Get the button that opens the modal
-const btn = document.querySelector(".collapseToggle");
+// Function to toggle the collapse state
+function toggleCollapse(event) {
+    const target = event.target.closest('.column.accountlist-col-body'); // Find the closest parent column for accountlist-col-body
+    const row = target.closest('.row'); // Find the closest row element
 
-// Get the <span> element that closes the modal
-const span = document.querySelector(".close-button");
+    // Toggle the 'collapsed' class to hide or show the details
+    row.classList.toggle('collapsed');
 
-// When the user clicks the button, open the modal
-btn.addEventListener("click", function() {
-    modal.style.display = "block";
-});
-
-// When the user clicks on <span> (x), close the modal
-span.addEventListener("click", function() {
-    modal.style.display = "none";
-});
-
-// When the user clicks anywhere outside of the modal, close it
-window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
+    // Optionally, toggle the icon (if you want to change the button icon when collapsed)
+    const icon = target.querySelector('i');
+    if (row.classList.contains('collapsed')) {
+        icon.classList.add('collapsed-icon'); // Add a collapsed icon class (if you have it)
+        icon.classList.remove('expanded-icon'); // Remove expanded icon class (if you have it)
+    } else {
+        icon.classList.add('expanded-icon'); // Add expanded icon class (if you have it)
+        icon.classList.remove('collapsed-icon'); // Remove collapsed icon class (if you have it)
     }
+}
+
+// Add event listener to all collapse buttons
+document.querySelectorAll('.collapseToggle').forEach(button => {
+    button.addEventListener('click', toggleCollapse);
 });
+
 																			</script>
 	   
 
