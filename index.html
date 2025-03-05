@@ -173,36 +173,39 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="YWI4NWNmM
     margin-right: 5px; /* Space between icon and text */
 }
 
-	    #dialog {
+	   /* The overlay (background) */
+#dialog {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensures the dialog is on top of other elements */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    z-index: 9999; /* Ensures the dialog is on top of other content */
 }
 
+/* The content of the dialog box */
 #dialog > div {
     background: white;
     padding: 20px;
-    border-radius: 5px;
-    max-width: 500px;  /* Optional: limits the width of the dialog */
-    width: 100%;
+    border-radius: 25px;
+    width: 80%;  /* Optional: adjusts the width of the dialog */
+    max-width: 373px;  /* Optional: limits the maximum width of the dialog */
     box-sizing: border-box;
 }
 
+/* The close button */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
-    color: #333;
 }
+
 
 </style>
 
