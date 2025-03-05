@@ -299,49 +299,25 @@ var __uzdbm_1 = "2058b5e0-18df-7130-cd36-ff0145d0ca8d";var __uzdbm_2 ="NmNiYTYxN
 	      </div>
 
 	      <script>
-document.getElementById("toggleButton").addEventListener("click", function() {
-    var contentDiv = document.getElementById("contentDiv");
-    if (contentDiv.style.display === "none") {
-        contentDiv.style.display = "block"; // Show the div
-    } else {
-        contentDiv.style.display = "none"; // Hide the div
-    }
-});
-		      
-		      document.getElementById("toggleButton2").addEventListener("click", function() {
-    var contentDiv2 = document.getElementById("contentDiv");
-    if (contentDiv.style.display === "none") {
-        contentDiv.style.display = "block"; // Show the div
-    } else {
-        contentDiv.style.display = "none"; // Hide the div
-    }
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const faqs = [
+        { buttonId: "toggleButton", contentId: "contentDiv" },
+        { buttonId: "toggleButton2", contentId: "contentDiv2" },
+        { buttonId: "toggleButton3", contentId: "contentDiv3" },
+        { buttonId: "toggleButton4", contentId: "contentDiv4" },
+        { buttonId: "toggleButton5", contentId: "contentDiv5" }
+    ];
 
-		      document.getElementById("toggleButton3").addEventListener("click", function() {
-    var contentDiv3 = document.getElementById("contentDiv");
-    if (contentDiv.style.display === "none") {
-        contentDiv.style.display = "block"; // Show the div
-    } else {
-        contentDiv.style.display = "none"; // Hide the div
-    }
-});
+    faqs.forEach(faq => {
+        const button = document.getElementById(faq.buttonId);
+        const content = document.getElementById(faq.contentId);
 
-		      document.getElementById("toggleButto4").addEventListener("click", function() {
-    var contentDiv4 = document.getElementById("contentDiv");
-    if (contentDiv.style.display === "none") {
-        contentDiv.style.display = "block"; // Show the div
-    } else {
-        contentDiv.style.display = "none"; // Hide the div
-    }
-});
-
-		      document.getElementById("toggleButto5").addEventListener("click", function() {
-    var contentDiv5 = document.getElementById("contentDiv");
-    if (contentDiv.style.display === "none") {
-        contentDiv.style.display = "block"; // Show the div
-    } else {
-        contentDiv.style.display = "none"; // Hide the div
-    }
+        if (button && content) {
+            button.addEventListener("click", function () {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            });
+        }
+    });
 });
 </script>
 
